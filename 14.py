@@ -4,4 +4,4 @@ class Solution:
             for x in range(len(strs)-1):
               if strs[x][:i+1] != strs[x+1][:i+1]:
                 return strs[x][:i]
-        return (min(strs))
+        return min(strs)
