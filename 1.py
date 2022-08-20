@@ -1,7 +1,8 @@
-# Two Sum
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        for x in range(len(nums)):
-            for y in range(x+1, len(nums)):
-                if nums[x] + nums[y] == target:
-                    return [x, y]
+        hashMap = {}
+        
+        for index, value in enumerate(nums):
+            if target - value in hashMap:
+                return [hashMap[target - value], index]
+            hashMap[value] = index
